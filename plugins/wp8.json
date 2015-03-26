@@ -1,0 +1,26 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"networkinterface\"><param name=\"wp-package\" value=\"networkinterface\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.albahra.plugin.networkinterface": {
+            "PACKAGE_NAME": "{9b366360-d3e2-11e4-b75c-95bff6f6440c}"
+        }
+    },
+    "dependent_plugins": {}
+}
