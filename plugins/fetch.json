@@ -5,5 +5,11 @@
             "url": "https://github.com/salbahra/NetworkInterfacePlugin",
             "subdir": "."
         }
+    },
+    "org.apache.cordova.network-information": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.network-information"
+        }
     }
 }
