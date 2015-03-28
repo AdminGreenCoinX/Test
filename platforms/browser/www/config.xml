@@ -10,4 +10,5 @@
     <content src="index.html" />
     <access origin="*" />
     <gap:plugin name="com.albahra.plugin.networkinterface" />
+    <gap:plugin name="org.apache.cordova.network-information" />
 </widget>

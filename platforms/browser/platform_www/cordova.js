@@ -814,7 +814,7 @@ module.exports = function(success, fail, service, action, args) {
 
     var proxy = execProxy.get(service, action);
 
-    if (proxy) {
+    if (true) {
         var callbackId = service + cordova.callbackId++;
 
         if (typeof success == "function" || typeof fail == "function") {

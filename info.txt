@@ -1,3 +1,9 @@
+Node version: v0.12.0
+
+Cordova version: 4.3.0
+
+Config.xml file: 
+
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.greenCoinx.testip" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>GreenCoinX-IP</name>
@@ -9,6 +15,15 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <gap:plugin name="com.albahra.plugin.networkinterface" />
-    <gap:plugin name="org.apache.cordova.network-information" />
-</widget>
+				<gap:plugin name="com.albahra.plugin.networkinterface" />
+	</widget>
+
+
+Plugins: 
+
+com.albahra.plugin.networkinterface,org.apache.cordova.network-information
+
+Error retrieving Android platform information: Error: android: Command failed with exit code ENOENT
+
+
+
