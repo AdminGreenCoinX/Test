@@ -1,9 +1,0 @@
-{
-    "com.albahra.plugin.networkinterface": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/salbahra/NetworkInterfacePlugin",
-            "subdir": "."
-        }
-    }
-}
