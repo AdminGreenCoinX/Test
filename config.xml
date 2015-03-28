@@ -1,25 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.greenCoinx.testip" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
  <name>GreenCoinX</name>
- <description>
-	GreenCoinX - a fully identified, digital virtual crypto national currency
-	</description>
- <author href="http://greencoinx.com" email="admin@greencoinx.com">
-		GreenCoinX
- </author>
+ <description>GreenCoinX - a fully identified, digital virtual crypto national currency</description>
+ <author href="http://greencoinx.com" email="admin@greencoinx.com">		GreenCoinX </author>
  <content src="index.html" />
  <access origin="*" />
- <feature name="http://api.phonegap.com/1.0/device" />	
+ <feature name="http://api.phonegap.com/1.0/device" />
 	<preference name="phonegap-version"           value="3.7.0" />
  <preference name="orientation"                value="default" />
-				<gap:platform name="ios" />
-				<gap:platform name="android" />
-				<gap:platform name="webos" />
-				<gap:platform name="symbian" />
-				<gap:platform name="blackberry" />
-				<gap:platform name="winphone" />
-				<gap:platform name="wp8" />
-				<gap:platform name="windows" />
-	
-	<gap:plugin name="com.albahra.plugin.networkinterface" version="1.0.7" />
+				
+	<plugin name="com.albahra.plugin.networkinterface" version="1.0.7" />
 </widget>
