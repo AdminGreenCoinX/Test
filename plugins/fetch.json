@@ -1,15 +1,8 @@
 {
-    "com.albahra.plugin.networkinterface": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/salbahra/NetworkInterfacePlugin",
-            "subdir": "."
-        }
-    },
-    "org.apache.cordova.network-information": {
+    "org.chromium.system.network": {
         "source": {
             "type": "registry",
-            "id": "org.apache.cordova.network-information"
+            "id": "org.chromium.system.network"
         }
     }
 }

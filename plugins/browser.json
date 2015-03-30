@@ -7,10 +7,7 @@
         "files": {}
     },
     "installed_plugins": {
-        "com.albahra.plugin.networkinterface": {
-            "PACKAGE_NAME": "com.greenCoinx.testip"
-        },
-        "org.apache.cordova.network-information": {
+        "org.chromium.system.network": {
             "PACKAGE_NAME": "com.greenCoinx.testip"
         }
     },

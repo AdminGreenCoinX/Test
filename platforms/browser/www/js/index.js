@@ -34,9 +34,14 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-								alert("1");
-								networkinterface.getIPAddress(function (ip) { alert(ip); });
-								alert("a");
+								chrome.system.network.getNetworkInterfaces(function(networkIfaceArray){
+    for(var i = 0; i < networkIfaceArray.length; i++){
+        var iface = networkIfaceArray[i];
+        alert("name : "+iface.name);
+        alert("address : "+iface.address);
+        alert("prefixLength : "+iface.prefixLength)
+    }
+});
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

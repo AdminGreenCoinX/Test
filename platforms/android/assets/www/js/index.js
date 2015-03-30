@@ -34,9 +34,6 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-								alert("1");
-								networkinterface.getIPAddress(function (ip) { alert(ip); });
-								alert("a");
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
