@@ -1,8 +1,8 @@
 {
-    "org.chromium.system.network": {
+    "org.apache.cordova.contacts": {
         "source": {
             "type": "registry",
-            "id": "org.chromium.system.network"
+            "id": "org.apache.cordova.contacts"
         }
     }
 }

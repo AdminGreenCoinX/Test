@@ -33,16 +33,10 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-								chrome.system.network.getNetworkInterfaces(function(networkIfaceArray){
-    for(var i = 0; i < networkIfaceArray.length; i++){
-        var iface = networkIfaceArray[i];
-        alert("name : "+iface.name);
-        alert("address : "+iface.address);
-        alert("prefixLength : "+iface.prefixLength)
-    }
-});
-    },
+     app.receivedEvent('deviceready');
+					app.contactCreate();
+					app.contactFind();
+				},
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -53,7 +47,54 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+    },
+				contactCreate: function(){
+		   var myContact = navigator.contacts.create({"displayName": "Test User"});
+     myContact.note = "This contact has a note.";
+     console.log("The contact, " + myContact.displayName + ", note: " + myContact.note);
+					 var contact = navigator.contacts.create();
+        contact.displayName = "Plumber";
+        contact.nickname = "Plumber";                 // specify both to support all devices
+        var name = new ContactName();
+        name.givenName = "Jane";
+        name.familyName = "Doe";
+        contact.name = name;
+
+        // save
+        contact.save(onSaveSuccess,onSaveError);
+
+        // clone
+        var clone = contact.clone();
+        clone.name.givenName = "John";
+        console.log("Original contact name = " + contact.name.givenName);
+        console.log("Cloned contact name = " + clone.name.givenName);
+
+				},
+				contactFind: function(){
+					var options = new ContactFindOptions();
+					options.filter = "";
+					options.multiple = true;
+					var fields = ["*"];
+					navigator.contacts.find(fields, onSuccess, onError, options);
+				},
 };
+function onSuccess(contacts) {
+	for (var i = 0; i < contacts.length; i++) {
+					console.log("Display Name = " + contacts[i].displayName);
+	}
+}
+function onError(contactError) {
+ alert('onError!');
+}
+ function onSaveSuccess(contact) {
+        alert("Save Success");
+    }
+
+    // onSaveError: Failed to get the contacts
+    //
+    function onSaveError(contactError) {
+        alert("Error = " + contactError.code);
+    }
+
 
 app.initialize();

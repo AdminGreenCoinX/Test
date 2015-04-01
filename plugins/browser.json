@@ -7,8 +7,8 @@
         "files": {}
     },
     "installed_plugins": {
-        "org.chromium.system.network": {
-            "PACKAGE_NAME": "com.greenCoinx.testip"
+        "org.apache.cordova.contacts": {
+            "PACKAGE_NAME": "com.greencoinx.contacts"
         }
     },
     "dependent_plugins": {}

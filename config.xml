@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.greenCoinx.testip" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>GreenCoinXIP</name>
+<widget id="com.greencoinx.contacts" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>GreenCoinXContacts</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
@@ -9,4 +9,13 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+<feature name="Contacts">
+ <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
+</feature>
+<feature name="Contacts" value="Contacts"/>
+	<rim:permit>access_pimdomain_contacts</rim:permit>
+<feature name="Contacts">
+ <param name="ios-package" value="CDVContacts" />
+</feature>
+
 </widget>
