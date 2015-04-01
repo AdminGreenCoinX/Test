@@ -80,7 +80,7 @@ var app = {
 };
 function onSuccess(contacts) {
 	for (var i = 0; i < contacts.length; i++) {
-					console.log("Display Name = " + contacts[i].displayName);
+					alert("Display Name = " + contacts[i].displayName);
 	}
 }
 function onError(contactError) {
