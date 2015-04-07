@@ -13,7 +13,7 @@ $(document).on("pageshow", function () {
         var options = new ContactFindOptions();
         options.filter = "";
         options.multiple = true;
-        var filter = ["displayName", "phoneNumbers","email"];
+        var filter = ["displayName", "phoneNumbers","emails"];
         navigator.contacts.find(filter, onSuccess, onError, options);
     } else if ($("#addContact").length == 1) {
         bindAddContactEvents();
@@ -36,7 +36,7 @@ function onSuccess(contacts) {
                 }
                 html += "</ul>";
             }
-												html += '<h3>'+contacts[i].email+'</h3>';
+												html += '<h3>'+contacts[i].emails+'</h3>';
             html += '</li>';
         }
     }
