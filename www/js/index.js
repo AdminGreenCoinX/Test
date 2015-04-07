@@ -36,7 +36,16 @@ function onSuccess(contacts) {
                 }
                 html += "</ul>";
             }
-												html += '<h3>'+contacts[i].emails+'</h3>';
+												if (contacts[i].emails) {
+                html += '<ul class="innerlsv" data-role="listview" data-inset="true">';
+                html += '<li><h3>Emails</h3></li>';
+                for (var j = 0; j < contacts[i].emails.length; j++) {
+                    html += "<li>Type: " + contacts[i].emails[j].type + "<br/>" +
+                        "Value: " + contacts[i].emails[j].value + "<br/>" +
+                        "Preferred: " + contacts[i].emails[j].pref + "</li>";
+                }
+                html += "</ul>";
+            }
             html += '</li>';
         }
     }
